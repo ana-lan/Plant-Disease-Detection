@@ -190,7 +190,8 @@ export const ImageUpload = () => {
     }
     setIsloading(true);
     sendFile();
-  }, [preview]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [preview, setIsloading, sendFile]);
 
   const onSelectFile = (files) => {
     if (!files || files.length === 0) {
